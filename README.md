@@ -1,2 +1,2 @@
 # itp150
-Python code form ITP150
+Python code from ITP150
