@@ -1,0 +1,21 @@
+import openpyxl
+
+wb  = openpyxl.load_workbook('pyExcel.xlsx')
+sheet = wb['IncomeTax']
+
+cells = sheet['B5':'C11']
+
+while True:
+    rate=(input(f'Enter hourly rate: '))
+    try:
+        rate = float(rate)
+        break
+    except:
+        print('\tPlease enter a valid entry... ')
+
+for line in range(0,len(cells)):
+    cells[line][1].value = '${:,.2f}'.format(rate * float(cells[line][0].value))
+
+
+wb.save('pyExcel.xlsx')
+    
