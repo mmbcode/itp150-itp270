@@ -1,7 +1,7 @@
 import locale
 locale.setlocale( locale.LC_ALL, '' )
 
-# Variables
+#  Variables
 global taxRate
 taxRate=.06
 
